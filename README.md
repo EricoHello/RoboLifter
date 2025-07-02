@@ -1,108 +1,183 @@
-# 🤖 GymBroAI
+<p align="center">
+  <img src="https://em-content.zobj.net/source/microsoft-teams/363/man-lifting-weights_1f3cb-fe0f-200d-2642-fe0f.png" alt="GymBroAI Logo" width="60"/>
+</p>
 
-AI GymBro is an AI-powered personal trainer that uses your device’s camera to analyze your squat and pushup form in real time. It provides instant, accurate, and encouraging voice feedback using advanced pose detection, LLM-based coaching, and realistic text-to-speech.
+<h1 align="center">GymBroAI</h1>
 
 
+<p align="center">
+  <!-- <a href="https://medium.com/@danieljeffries1/how-ai-powered-fitness-coaches-will-change-the-world-2b6e7b2b7d7c">📝 Blog</a> • -->
+  <b>2025 Dream AI Hackathon Project</b>
+</p>
 
-## 🎬 Demo
+<p align="center">
+  <img src="https://img.shields.io/pypi/v/gymbroai?color=brightgreen" alt="PyPI version"/>
+  <img src="https://img.shields.io/badge/python-3-blue.svg" alt="Python Version"/>
+  <img src="https://img.shields.io/github/license/suriyaks0902/Ai-gymbro" alt="License"/>
+</p>
 
-<div align="center">
+<p align="center">
+  <b>Build, analyze, and level up your fitness — with real-time AI coaching.</b>
+</p>
 
+<p align="center">
   <!-- Clickable YouTube thumbnail -->
   <a href="https://www.youtube.com/watch?v=N7-vfCMKyMo" target="_blank">
-    <img src="https://img.youtube.com/vi/N7-vfCMKyMo/0.jpg" alt="Demo Video" width="480"/>
+    <img src="https://img.youtube.com/vi/N7-vfCMKyMo/0.jpg" alt="GYMBROAI Demo" width="700"/>
   </a>
   <br>
-
-</div>
-
-
-
-
-## 🚀 Features
-
-- **Real-Time Joint Detection:** Uses computer vision to track your body joints live.
-- **Exercise Recognition:** Detects and analyzes squats and pushups automatically.
-- **AI Voice Feedback:** Provides instant, personalized coaching using LLM and TTS.
-- **Rep Counting:** Accurately counts your repetitions and gives motivational praise.
-- **Modern UI:** Clean, responsive interface for both desktop and mobile.
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ What is GymBroAI?
 
-- **Frontend:** React (Next.js), TypeScript, Tailwind CSS
-- **Backend:** FastAPI, Python
-- **AI/ML:** Pose Estimation (MediaPipe), LLM (Ollama/Mistral), ElevenLabs TTS
-- **Deployment:** Docker, Uvicorn
+GymBroAI is an end-to-end AI-powered personal trainer that analyzes your squat and pushup form in real time using your device’s camera. It provides instant, accurate, and encouraging voice feedback using advanced pose detection, LLM-based coaching, and realistic text-to-speech.
+
+It was built at the **2025 Dream AI Hackathon** (Likelion US, Cambridge) — where 180+ innovators across 37+ teams built AI-driven solutions for real-world impact.
 
 ---
 
-## 🏃‍♂️ Getting Started
+### 🕵️ Analyze your form with real-time computer vision  
+🔹 Get instant, personalized AI voice feedback  
+🔹 Track reps and progress automatically  
+🔹 Enjoy a modern, responsive web experience
 
-### Prerequisites
+**TL;DR:** Go from “start workout” to “AI-powered feedback” in <60 seconds.
 
-- Node.js & npm
-- Python 3.10+
-- [Ollama](https://ollama.com/) (for local LLM)
-- [ElevenLabs API Key](https://elevenlabs.io/)
-- (Optional) Docker
+---
 
-### Installation
+## 🛠️ Installation (30 s)
 
-1. **Clone the repository:**
+```bash
+# Clone the repository
+git clone https://github.com/suriyaks0902/Ai-gymbro.git
+cd Ai-gymbro
+
+# Install backend dependencies
+pip install -r requirements.txt
+
+# Install frontend dependencies
+cd app
+npm install
+npm run dev
+```
+
+**Set your ElevenLabs API key for voice feedback:**
+
+```bash
+export ELEVEN_API_KEY="your-elevenlabs-api-key"
+```
+
+**(Optional) Start Ollama for local LLM:**
+
+```bash
+ollama run mistral
+```
+
+---
+
+## ⏱️ 60-second Quick-Start
+
+1. Start the backend:
     ```bash
-    git clone https://github.com/your-org/ai-gymbro.git
-    cd ai-gymbro
+    uvicorn ai_server:app --reload
     ```
-
-2. **Frontend Setup:**
+2. Start the frontend:
     ```bash
     cd app
-    npm install
     npm run dev
     ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+4. Allow camera access, select your exercise, and start moving!
 
-3. **Backend Setup:**
-    ```bash
-    cd ../
-    pip install -r requirements.txt
-    python -m uvicorn ai_server:app --host 0.0.0.0 --port 8000
-    ```
+---
 
+## 🔥 Features
+
+- **Full-stack AI fitness coaching:** Real-time pose estimation, exercise detection, and voice feedback.
+- **Robust feedback API:** Get actionable, encouraging tips for every rep.
+- **Modern UI:** Responsive, mobile-friendly design.
+- **Multi-model support:** Use any LLM (Ollama, OpenAI, etc.) and ElevenLabs for TTS.
+- **Accurate rep counting:** Never miss a rep!
+- **Plug-and-play:** Easy to set up and use.
+
+---
+
+## 🏋️‍♂️ Supported Exercises
+
+| Exercise | Detection | Feedback | Rep Counting |
+|----------|-----------|----------|--------------|
+| Squats   | ✅        | ✅       | ✅           |
+| Pushups  | ✅        | ✅       | ✅           |
+
+---
+
+## 🎯 Feedback Structure
+
+Every rep or form error triggers a feedback event:
+
+```json
+{
+  "eventType": "form_error" | "rep_complete",
+  "exercise": "squat" | "pushup",
+  "angles": {...},
+  "repCount": 3,
+  "formError": "Knees caving in",
+  "voice_id": "cgSgspJ2msm6clMCkdW9"
+}
+```
+
+---
+
+## 🗣️ Voice Feedback
+
+- **Personalized:** Feedback is generated by an LLM and spoken using ElevenLabs TTS.
+- **Selectable voices:** Choose male or female voice for your coach.
+- **Multilingual:** Easily extend to other languages.
+
+---
+
+## ⚙️ Configuration
+
+- **Frontend:** `/app/app/page.tsx` — UI, camera, and pose logic.
+- **Backend:** `/ai_server.py` — API, LLM, and TTS integration.
+- **.env:** Store your API keys securely.
+
+---
+
+## 🏆 Built At
+
+**2025 Dream AI Hackathon**  
+Hosted by Likelion US, Cambridge  
+180+ participants | 37+ teams | 1 amazing weekend
 
 
 ---
 
-## 🖥️ Usage
+## 🤝 Contributing
 
-1. Open [http://localhost:3000](http://localhost:3000) in your browser.
-2. Allow camera access.
-3. Select your exercise (squat or pushup).
-4. Start moving! Get instant AI voice feedback on your form and reps.
-
----
-
-## 👥 Collaborators
-
-| Name                      | Contributions                                                                                           |
-|---------------------------|---------------------------------------------------------------------------------------------------------|
-| **Alan Tai**              | Joint detection & tracking, squat detection/analysis, AI voice module integration.                      |
-| **Joshua Chan**           | Joint detection & tracking, squat detection/analysis, AI voice module integration.                      |
-| **Suriya Kasiyalan Siva** |  Developed AI voice coaching module (TTS & LLM), form analysis. |
-| **Philip Elbert**         | Frontend & UI implementation, real-time squat feedback algorithm.                                       |
-| **Meet Karnik**           | Pushup detection logic, joint tracking, frontend/UI, exercise form analysis, rep counting.              |
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
+- 📢 Feature requests? [Open an Issue](https://github.com/suriyaks0902/Ai-gymbro/issues/new)
+- 🐛 Bug reports? [Create a ticket](https://github.com/suriyaks0902/Ai-gymbro/issues/new)
+- 🛠️ Submit code? Fork + PR — we love clean commits!
 
 ---
 
 ## 🙏 Acknowledgements
 
-- [ElevenLabs](https://elevenlabs.io/)
 - [MediaPipe](https://mediapipe.dev/)
 - [Ollama](https://ollama.com/)
+- [ElevenLabs](https://elevenlabs.io/)
+- [Likelion US](https://likelion.us/)
+
+---
+
+## ⭐️ Why GymBroAI?
+
+Because everyone deserves a personal trainer — powered by AI, accessible anywhere, and always encouraging you to:
+
+- reach your fitness goals.
+- improve your form and stay motivated.
+- unlock your full potential, one rep at a time.
+- train smarter, not just harder.
+- make fitness fun, interactive, and effective.
