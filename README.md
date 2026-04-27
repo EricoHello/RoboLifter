@@ -2,7 +2,7 @@
   <img src="https://em-content.zobj.net/source/microsoft-teams/363/man-lifting-weights_1f3cb-fe0f-200d-2642-fe0f.png" alt="GymBroAI Logo" width="60"/>
 </p>
 
-<h1 align="center">GymBroAI</h1>
+<h1 align="center">RoboLifter</h1>
 
 
 <p align="center">
@@ -22,17 +22,17 @@
 
 <p align="center">
   <!-- Clickable YouTube thumbnail -->
-  <a href="https://www.youtube.com/watch?v=N7-vfCMKyMo" target="_blank">
-    <img src="https://img.youtube.com/vi/N7-vfCMKyMo/0.jpg" alt="GYMBROAI Demo" width="700"/>
+  <a href="https://www.youtube.com/watch?v=rNnuhV5eumg" target="_blank">
+    <img src="https://img.youtube.com/vi/rNnuhV5eumg/0.jpg" alt="RoboLifter Demo" width="700"/>
   </a>
   <br>
 </p>
 
 ---
 
-## ✨ What is GymBroAI?
+## ✨ What is RoboLifter?
 
-GymBroAI is an end-to-end AI-powered personal trainer that analyzes your squat and pushup form in real time using your device’s camera. It provides instant, accurate, and encouraging voice feedback using advanced pose detection, LLM-based coaching, and realistic text-to-speech.
+RoboLifter is an end-to-end AI-powered personal trainer that analyzes your squat and pushup form in real time using your device’s camera. It provides instant, accurate, and encouraging voice feedback using advanced pose detection, LLM-based coaching, and realistic text-to-speech.
 
 It was built at the **2025 Dream AI Hackathon** (Likelion US, Cambridge) — where 180+ innovators across 37+ teams built AI-driven solutions for real-world impact.
 
