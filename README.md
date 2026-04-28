@@ -22,8 +22,8 @@
 
 <p align="center">
   <!-- Clickable YouTube thumbnail -->
-  <a href="https://www.youtube.com/watch?v=rNnuhV5eumg" target="_blank">
-    <img src="https://img.youtube.com/vi/rNnuhV5eumg/0.jpg" alt="RoboLifter Demo" width="700"/>
+  <a href="https://www.youtube.com/watch?v=tHOLvFeM1kI" target="_blank">
+    <img src="https://img.youtube.com/vi/tHOLvFeM1kI/0.jpg" alt="RoboLifter Demo" width="700"/>
   </a>
   <br>
 </p>
